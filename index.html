@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive Function backups</title>
+<meta name="description" content="A personal tool that keeps sealed copies of the Executive Function app's nightly backups in its owner's own Google Drive.">
+<style>
+  :root { color-scheme: light dark; --ink: #1d1d1f; --muted: #5b5b60; --rule: #d9d9de; --bg: #fdfdfc; --link: #1a5fb4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink: #ececef; --muted: #a4a4ab; --rule: #3a3a40; --bg: #18181b; --link: #78aeed; }
+  }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 40rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .4rem; }
+  h2 { font-size: 1.15rem; margin: 2.2rem 0 .4rem; }
+  .lede { color: var(--muted); margin: 0 0 2rem; }
+  a { color: var(--link); }
+  code { font-size: .92em; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .92rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Executive Function backups</h1>
+  <p class="lede">A personal tool that keeps sealed copies of the Executive Function app's nightly backups in its
+  owner's own Google Drive.</p>
+
+  <h2>What it is</h2>
+  <p>Executive Function is a task and planning app that one person runs on their own computer. Each night it backs up
+  its database and files on that computer. This tool is the last step of that backup: it seals what is new
+  (encrypting it to the owner's public key, so that only the owner's private key, kept on paper and a USB stick,
+  can open it) and uploads it to a folder called "Executive Function backups" in the owner's Google Drive. If the
+  computer is ever lost, stolen or broken, the backups are still there.</p>
+
+  <h2>Why it asks for access to Google Drive</h2>
+  <p>To upload the sealed backups, the tool asks Google for one permission, <code>drive.file</code>: access only to
+  the files and folder the tool itself creates. It cannot see, open or change any other file in the Drive. With that
+  permission it:</p>
+  <ul>
+    <li>creates its folder, "Executive Function backups";</li>
+    <li>uploads each night's sealed backup, and a copy of the small program that opens them;</li>
+    <li>reads back the size and checksum of what it uploaded, to make sure it arrived intact;</li>
+    <li>deletes an upload that arrived damaged (the backup is still on the computer, and goes again), and moves an
+    older copy of that program to the Drive's trash.</li>
+  </ul>
+  <p>It is not offered to anyone else: its only user is its owner, signing in to their own Google account.</p>
+
+  <h2>Privacy</h2>
+  <p>Nothing is collected or shared. The <a href="privacy.html">privacy policy</a> says so in full.</p>
+
+  <footer>
+    Made by <a href="https://github.com/B-RandD">B-RandD</a> for personal use.
+    <a href="privacy.html">Privacy policy</a>.
+  </footer>
+</main>
+</body>
+</html>

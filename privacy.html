@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy: Executive Function backups</title>
+<style>
+  :root { color-scheme: light dark; --ink: #1d1d1f; --muted: #5b5b60; --rule: #d9d9de; --bg: #fdfdfc; --link: #1a5fb4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink: #ececef; --muted: #a4a4ab; --rule: #3a3a40; --bg: #18181b; --link: #78aeed; }
+  }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 40rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .4rem; }
+  h2 { font-size: 1.15rem; margin: 2.2rem 0 .4rem; }
+  .lede { color: var(--muted); margin: 0 0 2rem; }
+  a { color: var(--link); }
+  code { font-size: .92em; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .92rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy policy</h1>
+  <p class="lede">Executive Function backups. Last updated 13 November 2026.</p>
+
+  <h2>In short</h2>
+  <p>Nothing is collected or shared. The tool runs on its owner's own computer, has no other users, and talks to no
+  one but Google, to keep the owner's backups in the owner's own Google Drive.</p>
+
+  <h2>What it accesses in Google Drive</h2>
+  <p>Only what the <code>drive.file</code> permission allows: the folder "Executive Function backups" and the files
+  the tool itself put there. It never sees any other file in the Drive. It uploads sealed (encrypted) backups and
+  the program that opens them, reads back their size and checksum to check each upload, deletes an upload that
+  arrived damaged (to send it again), and moves a replaced copy of that program to the Drive's trash.</p>
+
+  <h2>What it keeps, and where</h2>
+  <p>The Google sign-in that lets the backup run each night (a refresh token) is kept in a file on the owner's
+  computer and nowhere else. The backups it uploads are encrypted before they leave that computer; the key that
+  opens them is not on the computer, and is never sent to Google or anyone else.</p>
+
+  <h2>What it shares</h2>
+  <p>Nothing. No data is sold, shared, or sent to any server other than Google's. There are no analytics, no
+  advertising, and no tracking of any kind.</p>
+
+  <h2>Google API Services User Data Policy</h2>
+  <p>The tool's use and transfer of information received from Google APIs adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+  including the Limited Use requirements.</p>
+
+  <h2>Removing access</h2>
+  <p>The owner can end the tool's access at any time from their Google Account, under
+  <a href="https://myaccount.google.com/connections">Third-party apps &amp; services</a>, and delete its folder from
+  their Drive.</p>
+
+  <h2>Contact</h2>
+  <p>Through GitHub: <a href="https://github.com/B-RandD">github.com/B-RandD</a>.</p>
+
+  <footer>
+    <a href="index.html">Executive Function backups</a>
+  </footer>
+</main>
+</body>
+</html>
